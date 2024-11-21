@@ -1,0 +1,23 @@
+pipeline{
+agent any
+stages{
+stage('clone'){
+steps{
+git clone https://github.com/aleedevops/wipro.git
+
+}
+}
+stage('build'){
+steps{
+mvn install
+}
+
+}
+stage('deploy'){
+steps{
+echo "message"
+}
+}
+
+}
+}
